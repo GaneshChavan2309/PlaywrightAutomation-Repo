@@ -12,9 +12,8 @@ test.describe('Login Page Tests', () => {
     await loginPage.goto();
   });
 
-  //Comment i have added 
   // test('✔ Valid login should navigate to dashboard', async ({ page }) => {
-
+  //   // Use credentials from environment variables
   //   const validEmail = process.env.VALID_EMAIL || 'rahulshettyacademy@gmail.com';
   //   const validPassword = process.env.VALID_PASSWORD || 'learning';
     
@@ -32,7 +31,8 @@ test.describe('Login Page Tests', () => {
 
     // Verify error message is displayed
     await expect(loginPage.errorMsg).toBeVisible();
-    
+    const errorText = await loginPage.getErrorMessage();
+    expect(errorText).toContain('Incorrect');
   });
 
   test('⚠ Empty username should prevent login', async ({ page }) => {
