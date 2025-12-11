@@ -67,7 +67,6 @@ export default defineConfig({
       },
     },
 
-    // Uncomment to enable Firefox (requires: npx playwright install firefox)
     // {
     //   name: 'firefox',
     //   use: { 
@@ -76,7 +75,6 @@ export default defineConfig({
     //   },
     // },
 
-    // Uncomment to enable WebKit (requires: npx playwright install webkit)
     // {
     //   name: 'webkit',
     //   use: { 
