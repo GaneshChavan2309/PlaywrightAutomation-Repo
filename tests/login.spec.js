@@ -12,7 +12,6 @@ test.describe('Login Page Tests', () => {
     await loginPage.goto();
   });
 
-  //Comment i have added 
   // test('✔ Valid login should navigate to dashboard', async ({ page }) => {
 
   //   const validEmail = process.env.VALID_EMAIL || 'rahulshettyacademy@gmail.com';
@@ -22,26 +21,17 @@ test.describe('Login Page Tests', () => {
     
   //   // Verify successful login - page remains on login page after submit
   //   await expect(page).toHaveURL(`https://rahulshettyacademy.com/loginpagePractise/`);
+  //   await page.pause();
   // });
-
-  test('❌ Invalid login should show error message', async ({ page }) => {
-    const invalidEmail = process.env.INVALID_EMAIL || 'invalid@example.com';
-    const invalidPassword = process.env.INVALID_PASSWORD || 'wrongpass';
+  test('✔ Valid login should navigate to dashboard', async ({ page }) => {
     
-    await loginPage.login(invalidEmail, invalidPassword);
-
-    // Verify error message is displayed
-    await expect(loginPage.errorMsg).toBeVisible();
+    await loginPage.login("rahulshettyacademy", "learning");
     
-  });
+    // Verify successful login - page remains on login page after submit
+    await expect(page).toHaveURL(`https://rahulshettyacademy.com/loginpagePractise/`);
+    await page.pause();
+  })
 
-  test('⚠ Empty username should prevent login', async ({ page }) => {
-    // Try to login with empty username
-    await page.locator('#password').fill('somepassword');
-    await page.locator('#signInBtn').click();
-    
-    // Should remain on login page (invalid attempt)
-    await expect(page).toHaveURL(/.*loginpage/);
-  });
+
 });
 

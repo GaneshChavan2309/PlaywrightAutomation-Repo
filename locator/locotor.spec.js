@@ -6,7 +6,7 @@
 const Locators = {
   // Login Form Elements
   login: {
-    usernameInput: '#username',
+    usernameInput: '//input[@id="username"]',
     passwordInput: '#password',
     signInButton: '#signInBtn',
     errorMessage: '.alert-danger',

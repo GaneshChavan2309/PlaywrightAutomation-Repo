@@ -67,21 +67,23 @@ export default defineConfig({
       },
     },
 
-    {
-      name: 'firefox',
-      use: { 
-        ...devices['Desktop Firefox'],
-        headless: false, // Run in headed mode
-      },
-    },
+    // Uncomment to enable Firefox (requires: npx playwright install firefox)
+    // {
+    //   name: 'firefox',
+    //   use: { 
+    //     ...devices['Desktop Firefox'],
+    //     headless: false, // Run in headed mode
+    //   },
+    // },
 
-    {
-      name: 'webkit',
-      use: { 
-        ...devices['Desktop Safari'],
-        headless: false, // Run in headed mode
-      },
-    },
+    // Uncomment to enable WebKit (requires: npx playwright install webkit)
+    // {
+    //   name: 'webkit',
+    //   use: { 
+    //     ...devices['Desktop Safari'],
+    //     headless: false, // Run in headed mode
+    //   },
+    // },
 
     /* Test against mobile viewports. */
     // {
