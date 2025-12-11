@@ -67,21 +67,21 @@ export default defineConfig({
       },
     },
 
-    {
-      name: 'firefox',
-      use: { 
-        ...devices['Desktop Firefox'],
-        headless: false, // Run in headed mode
-      },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { 
+    //     ...devices['Desktop Firefox'],
+    //     headless: false, // Run in headed mode
+    //   },
+    // },
 
-    {
-      name: 'webkit',
-      use: { 
-        ...devices['Desktop Safari'],
-        headless: false, // Run in headed mode
-      },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { 
+    //     ...devices['Desktop Safari'],
+    //     headless: false, // Run in headed mode
+    //   },
+    // },
 
     /* Test against mobile viewports. */
     // {
