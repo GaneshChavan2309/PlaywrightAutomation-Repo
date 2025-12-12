@@ -21,13 +21,11 @@ test.describe('Login Page Tests', () => {
     const ValidateLogo=await page.getByRole('link', { name: 'ProtoCommerce', exact: true }).textContent();
     console.log(`Logo text: ${ValidateLogo}`);
     expect(ValidateLogo).toBe('ProtoCommerce'); 
-
     
     const homeLinkText = await page.getByRole('link', { name: 'Home', exact: true }).textContent();
     console.log(`Home link text: ${homeLinkText}`);
     expect(homeLinkText).toBe('Home');
+    await page.pause();
   })
-
-
 });
 

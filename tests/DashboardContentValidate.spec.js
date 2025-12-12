@@ -17,16 +17,8 @@ test.describe('Login Page Tests', () => {
   });
 
   test('✔ Valid login should navigate to dashboard', async ({ page }) => {
-    const ValidateLogo = await page.getByRole('link', { name: 'ProtoCommerce', exact: true }).textContent();
-    console.log(`${ValidateLogo}`);
-    expect(ValidateLogo).toBe('ProtoCommerce');
+   await page.locator('//app-card[@class="col-lg-3 col-md-6 mb-3"]//div//a[text()="iphone X"]//../../../div[@class="card-footer"]/button').click();
   });
 
-  test('✔ Dashboard should display home link', async ({ page }) => {
-    const homeLinkText = await page.getByRole('link', { name: 'Home', exact: true }).textContent();
-    console.log(`Home link text: ${homeLinkText}`);
-    expect(homeLinkText).toBe('Home');
-    await page.waitForLoadState('domcontentloaded');
-  });
 });
 
